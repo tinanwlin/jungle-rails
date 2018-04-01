@@ -134,3 +134,53 @@ cat3.products.create!({
 
 
 puts "DONE!"
+
+
+puts "Re-creating Review ..."
+
+Review.destroy_all
+
+Review.create!({
+  product_id: 11,
+  user_id: 10,
+  description: "Excellent Transaction A+++",
+  rating: 5
+})
+
+Review.create!({
+  product_id: 11,
+  user_id: 20,
+  description: "Seller strikes again! Perfect item, as described with great comm and fast!",
+  rating: 5
+})
+
+Review.create!({
+  product_id: 10,
+  user_id: 15,
+  description: "A pleasure as always - excellent and communicative seller. Highest ratings!!!!",
+  rating: 5
+})
+
+Review.create!({
+  product_id: 11,
+  user_id: 12,
+  description: "recieved product",
+  rating: 2
+})
+
+Review.create!({
+  product_id: 9,
+  user_id: 12,
+  description: "its was good... shipping a little long tho",
+  rating: 3
+})
+
+Review.create!({
+  product_id: 9,
+  user_id: 20,
+  description: "No correspondence from seller. I emailed them twice. Payment denied.",
+  rating: 1
+})
+
+puts "Review DONE!"
+

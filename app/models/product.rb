@@ -5,6 +5,7 @@ class Product < ActiveRecord::Base
 
   belongs_to :category
   has_many :line_items #new add
+  has_many :reviews #new add
 
   validates :name, presence: true
   validates :price, presence: true
